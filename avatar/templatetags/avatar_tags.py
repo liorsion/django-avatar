@@ -20,6 +20,9 @@ def avatar_url(user, size=AVATAR_DEFAULT_SIZE):
     avatar = get_primary_avatar(user, size=size)
     if avatar:
         return avatar.avatar_url(size)
+    avatar = user.get_profile().get_default_avatar()
+    if avatar:
+        return avatar 
     else:
         if AVATAR_GRAVATAR_BACKUP:
             params = {'s': str(size)}
