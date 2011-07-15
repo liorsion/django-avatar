@@ -155,9 +155,10 @@ setup(
         "Environment :: Web Environment",
     ],
     keywords='avatar,django',
-    author='Eric Florenzano',
-    author_email='floguy@gmail.com',
-    url='http://github.com/ericflo/django-avatar/',
+    author='Lior Sion, Eric Florenzano',
+    author_email='lior.sion@gmail.com',
+    url='http://github.com/liorsion/django-avatar/',
+    install_requires = ['PIL>=1.1.7'],
     license='BSD',
     packages=find_packages(),
     package_data = {
